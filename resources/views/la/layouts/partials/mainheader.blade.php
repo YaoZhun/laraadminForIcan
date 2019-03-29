@@ -14,6 +14,7 @@
 
 	<!-- Header Navbar -->
 	<nav class="navbar navbar-static-top" role="navigation">
+
 	@if(LAConfigs::getByKey('layout') == 'layout-top-nav')
 		<div class="container">
 			<div class="navbar-header">
@@ -29,6 +30,15 @@
 		<!-- Sidebar toggle button-->
 		<a href="#" class="sidebar-toggle b-l" data-toggle="offcanvas" role="button">
 			<span class="sr-only">Toggle navigation</span>
+		</a>
+		<a href="" class="sidebar-toggle-changemenu"> 首頁 
+
+		</a>
+		<a href="" class="sidebar-toggle-changemenu"> 產品
+
+		</a>
+		<a href="" class="sidebar-toggle-changemenu"> 行銷
+
 		</a>
 		@include('la.layouts.partials.notifs')
 	@endif
