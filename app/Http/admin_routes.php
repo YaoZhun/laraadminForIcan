@@ -14,6 +14,9 @@ Route::get('files/{hash}/{name}', 'LA\UploadsController@get_file');
 |--------------------------------------------------------------------------
 */
 
+
+
+
 $as = "";
 if(\Dwij\Laraadmin\Helpers\LAHelper::laravel_ver() == 5.3) {
 	$as = config('laraadmin.adminRoute').'.';
@@ -70,4 +73,8 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::get(config('laraadmin.adminRoute') . '/backup_dt_ajax', 'LA\BackupsController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
+
+
+	/**/
+	Route::get(config('laraadmin.adminRoute') . '/mydata','LA\UesrConfigController@index');
 });
