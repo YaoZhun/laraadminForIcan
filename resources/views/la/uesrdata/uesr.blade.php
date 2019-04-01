@@ -1,14 +1,36 @@
 @extends('la.layouts.app')
 
-@section('htmlheader_title') Dashboard @endsection
-@section('contentheader_title') Dashboard @endsection
-@section('contentheader_description') Organisation Overview @endsection
+@section('htmlheader_title') 使用者資訊 @endsection
+@section('contentheader_title') 使用者資訊@endsection
+@section('contentheader_description')  @endsection
 
 @section('main-content')
 <!-- Main content -->
+        <section class="content">
+		  <!-- Small boxes (Stat box) -->
+		  <div class="modal-body">
+			<div class="box-body">
+				<img class="img-bordered ml25" width="100" height="100" style="display: inline-block;border-radius: 50%;" src="https://www.gravatar.com/avatar/534eded0f9eee5609333bffae6cbdc1f.jpg?s=80&amp;d=mm&amp;r=g" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">
 
-
-
+			</div>
+			<ul class="control-sidebar-subheading" style="list-style:none;">
+					<li>登入帳號</li>
+					<li></li>
+					<li>部門</li>
+					<li></li>
+					<li>帳號權限</li>
+					<li></li>
+					<li>手機號碼</li>
+					<li></li>
+					<li>生日</li>
+					<li></li>
+					<li>上次登入時間</li>
+					<li></li>
+					<li>登入地址</li>
+					<li></li>
+				</ul>
+		</div>
+		</section>
 @endsection
 
 @push('styles')
@@ -60,8 +82,8 @@
 (function($) {
 	$('body').pgNotification({
 		style: 'circle',
-		title: 'LaraAdmin',
-		message: "Welcome to LaraAdmin...",
+		title: '歡迎使用',
+		message: "艾肯娛樂後台系統該，頁面是你個人的帳號資訊。",
 		position: "top-right",
 		timeout: 0,
 		type: "success",

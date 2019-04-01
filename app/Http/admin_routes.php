@@ -29,10 +29,17 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	
 	/* ================== Dashboard ================== */
 	
-	Route::get(config('laraadmin.adminRoute'), 'LA\DashboardController@index');
+	/*Route::get(config('laraadmin.adminRoute'), 'LA\DashboardController@index');*/
 	Route::get(config('laraadmin.adminRoute'). '/dashboard', 'LA\DashboardController@index');
-	
+
+
+	/* ================== 使用者帳號資訊 ================== */
+	Route::get(config('laraadmin.adminRoute'),'LA\UesrController@index');
+
+
 	/* ================== Users ================== */
+
+
 	Route::resource(config('laraadmin.adminRoute') . '/users', 'LA\UsersController');
 	Route::get(config('laraadmin.adminRoute') . '/user_dt_ajax', 'LA\UsersController@dtajax');
 	
@@ -73,8 +80,4 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::get(config('laraadmin.adminRoute') . '/backup_dt_ajax', 'LA\BackupsController@dtajax');
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
-
-
-	/**/
-	Route::get(config('laraadmin.adminRoute') . '/mydata','LA\UesrConfigController@index');
 });
