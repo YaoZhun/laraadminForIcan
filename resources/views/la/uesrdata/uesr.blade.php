@@ -15,7 +15,7 @@
 			</div>
 			<ul class="control-sidebar-subheading" style="list-style:none;">
 					<li>登入帳號</li>
-					<li></li>
+					<li>{{ Auth::user() }}</li>
 					<li>部門</li>
 					<li></li>
 					<li>帳號權限</li>
