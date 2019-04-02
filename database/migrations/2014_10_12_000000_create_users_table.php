@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             ["checkbox", "checkbox", "Checkbox", false, "", 0, 0, false],
             ["mobile", "Mobile", "Mobile", false, "", 10, 20, false],
             ["LoginTime", "LoginTime", "Datetime", false, "", 0, 0, false],
+            ["Birthday", "Birthday", "Date", false, "", 0, 0, false],
         ]);
 		
 		/*

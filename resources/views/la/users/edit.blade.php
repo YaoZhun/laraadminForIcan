@@ -41,6 +41,7 @@
 					@la_input($module, 'checkbox')
 					@la_input($module, 'mobile')
 					@la_input($module, 'LoginTime')
+					@la_input($module, 'Birthday')
 					--}}
                     <br>
 					<div class="form-group">

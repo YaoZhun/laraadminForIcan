@@ -14,6 +14,7 @@
 
 			</div>
 			<ul class="control-sidebar-subheading" style="list-style:none;">
+			<p>	{{ Auth::user() }}</p>
 					<li>登入帳號</li>
 					<li>{{ Auth::user()->email }}</li>
 					<li>部門</li>
@@ -21,11 +22,24 @@
 					<li>帳號權限</li>
 					<li>{{ Auth::user()->type }}</li>
 					<li>手機號碼</li>
-					<li></li>
+					<li>
+							@if(Auth::user()->mobile == null)
+					        未設置
+						 	@else echo {{ Auth::user()->moblie }}
+		          			@endif
+					
+
+					</li>
 					<li>生日</li>
-					<li></li>
+
+					<li>
+						@if(Auth::user()->Birthday == 0000-00-00 )
+						未設置
+						@else echo {{ Auth::user()->Birthday }}
+						@endif
+					</li>
 					<li>上次登入時間</li>
-					<li></li>
+					<li>{{ Auth::user()->LoginTime }}</li>
 					<li>登入地址</li>
 					<li></li>
 				</ul>

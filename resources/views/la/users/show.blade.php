@@ -115,6 +115,7 @@
 						@la_display($module, 'checkbox')
 						@la_display($module, 'mobile')
 						@la_display($module, 'LoginTime')
+						@la_display($module, 'Birthday')
 					</div>
 				</div>
 			</div>
