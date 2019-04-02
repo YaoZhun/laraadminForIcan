@@ -65,6 +65,8 @@
 					@la_input($module, 'password')
 					@la_input($module, 'type')
 					@la_input($module, 'checkbox')
+					@la_input($module, 'mobile')
+					@la_input($module, 'LoginTime')
 					--}}
 				</div>
 			</div>

@@ -113,6 +113,8 @@
 						@la_display($module, 'password')
 						@la_display($module, 'type')
 						@la_display($module, 'checkbox')
+						@la_display($module, 'mobile')
+						@la_display($module, 'LoginTime')
 					</div>
 				</div>
 			</div>

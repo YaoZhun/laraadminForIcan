@@ -22,8 +22,8 @@ use App\Models\User;
 class UsersController extends Controller
 {
 	public $show_action = true;
-	public $view_col = 'name';
-	public $listing_cols = ['id', 'name', 'context_id', 'email', 'password', 'type', 'checkbox'];
+	public $view_col = 'checkbox';
+	public $listing_cols = ['id', 'name', 'context_id', 'email', 'password', 'type', 'checkbox', 'mobile', 'LoginTime'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns

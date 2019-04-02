@@ -25,7 +25,6 @@ class UesrController extends Controller
     
     public function index(Request $request)
     {
-        $user = Auth::user()->id;
         return view('la.uesrdata.uesr');
     }
-}
+}+
