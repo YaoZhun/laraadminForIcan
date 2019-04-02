@@ -27,4 +27,7 @@ class UesrController extends Controller
     {
         return view('la.uesrdata.uesr');
     }
+    public function PUT(){
+        return view('la.uesrdata.uesr');
+    }
 }

@@ -35,7 +35,7 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	/* ================== 使用者帳號資訊 ================== */
 	Route::get(config('laraadmin.adminRoute'),'LA\UesrController@index');
 
-
+	Route::get(config('laraadmin.adminRoute').'/UserDataPUT','LA\UesrController@PUT');
 	/* ================== Users ================== */
 
 

@@ -5,32 +5,36 @@
 @section('contentheader_description')  @endsection
 
 @section('main-content')
+<style>
+	.dataFont{
+		font-size: 15px;
+		font-weight:bolder;
+		line-height:40px;
+	}
+
+</style>
 <!-- Main content -->
         <section class="content">
-		  <!-- Small boxes (Stat box) -->
 		  <div class="modal-body">
 			<div class="box-body">
-				<img class="img-bordered ml25" width="100" height="100" style="display: inline-block;border-radius: 50%;" src="https://www.gravatar.com/avatar/534eded0f9eee5609333bffae6cbdc1f.jpg?s=80&amp;d=mm&amp;r=g" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">
+				<img class="img-bordered ml25" width="100" height="100" style="display: inline-block;" src="https://www.gravatar.com/avatar/534eded0f9eee5609333bffae6cbdc1f.jpg?s=80&amp;d=mm&amp;r=g" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">
 
 			</div>
 			<ul class="control-sidebar-subheading" style="list-style:none;">
-			<p>	{{ Auth::user() }}</p>
-					<li>登入帳號</li>
-					<li>{{ Auth::user()->email }}</li>
-					<li>部門</li>
-					<li>{{ Auth::user()->type }}</li>
-					<li>帳號權限</li>
-					<li>{{ Auth::user()->type }}</li>
-					<li>手機號碼</li>
+					<li class="dataFont">登入帳號:</li>
+						<li>{{ Auth::user()->email }}</li>
+					<li class="dataFont">部門:</li>
+						<li>{{ Auth::user()->type }}</li>
+					<li class="dataFont">帳號權限:</li>
+						<li>{{ Auth::user()->type }}</li>
+					<li class="dataFont">手機號碼:</li>
 					<li>
 							@if(Auth::user()->mobile == null)
 					        未設置
 						 	@else echo {{ Auth::user()->moblie }}
 		          			@endif
-					
-
 					</li>
-					<li>生日</li>
+					<li class="dataFont">生日:</li>
 
 					<li>
 						@if(Auth::user()->Birthday == 0000-00-00 )
@@ -38,13 +42,12 @@
 						@else echo {{ Auth::user()->Birthday }}
 						@endif
 					</li>
-					<li>上次登入時間</li>
-					<li>{{ Auth::user()->LoginTime }}</li>
-					<li>登入地址</li>
-					<li></li>
+					<li class="dataFont">上次登入日期:</li>
+						<li>{{ Auth::user()->LoginTime }}</li>
+					<li class="dataFont">登入位置:</li>
+					<li>尚未設置</li>
 				</ul>
 		</div>
-		{!! Form::open(['action' => 'LA\RolesController@store', 'id' => 'role-add-form']) !!}
 		</section>
 @endsection
 
