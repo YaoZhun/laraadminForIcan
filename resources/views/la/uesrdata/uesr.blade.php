@@ -15,11 +15,11 @@
 			</div>
 			<ul class="control-sidebar-subheading" style="list-style:none;">
 					<li>登入帳號</li>
-					<li>{{ Auth::user() }}</li>
+					<li>{{ Auth::user()->email }}</li>
 					<li>部門</li>
-					<li></li>
+					<li>{{ Auth::user()->type }}</li>
 					<li>帳號權限</li>
-					<li></li>
+					<li>{{ Auth::user()->type }}</li>
 					<li>手機號碼</li>
 					<li></li>
 					<li>生日</li>
@@ -30,6 +30,7 @@
 					<li></li>
 				</ul>
 		</div>
+		{!! Form::open(['action' => 'LA\RolesController@store', 'id' => 'role-add-form']) !!}
 		</section>
 @endsection
 
