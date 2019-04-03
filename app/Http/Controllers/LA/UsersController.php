@@ -23,7 +23,7 @@ class UsersController extends Controller
 {
 	public $show_action = true;
 	public $view_col = 'checkbox';
-	public $listing_cols = ['id', 'name', 'context_id', 'email', 'password', 'type', 'checkbox', 'mobile', 'LoginTime', 'Birthday'];
+	public $listing_cols = ['id', 'name', 'context_id', 'email', 'type', 'checkbox', 'mobile', 'LoginTime', 'Birthday'];
 	
 	public function __construct() {
 		// Field Access of Listing Columns
