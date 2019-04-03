@@ -15,8 +15,8 @@
 </style>
 <!-- Main content -->
         <section class="content">
-		  <div class="modal-body">
-			<div class="box-body">
+		  <div class="box box-success">
+			<div class="box-body ">
 				<img class="img-bordered ml25" width="100" height="100" style="display: inline-block;" src="https://www.gravatar.com/avatar/534eded0f9eee5609333bffae6cbdc1f.jpg?s=80&amp;d=mm&amp;r=g" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar2x.jpg" alt="">
 
 			</div>
@@ -47,6 +47,15 @@
 					<li class="dataFont">登入位置:</li>
 					<li>尚未設置</li>
 				</ul>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<p>{{ $test1 }}</p>
+				<p>{{ $test2 }}</p>
 		</div>
 		</section>
 @endsection

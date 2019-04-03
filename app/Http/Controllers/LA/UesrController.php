@@ -14,7 +14,6 @@ use Dwij\Laraadmin\Models\ModuleFields;
 use App\Models\User;
 
 
-
 class UesrController extends Controller
 {
     public function __construct()
@@ -25,9 +24,16 @@ class UesrController extends Controller
     
     public function index(Request $request)
     {
-        return view('la.uesrdata.uesr');
+        $testDB = DB::table('users')->select('name')->get();
+        $test1 = 'test1';
+        $test2 = 'test2';
+        return view('la.uesrdata.uesr',[
+            'test1'=>$test1,
+            'test2'=>$test2,
+            'testDB'=>$testDB,
+        ]);
     }
-    public function PUT(){
+    public function PUT(){ 
         return view('la.uesrdata.uesr');
     }
 }
