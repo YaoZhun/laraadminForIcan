@@ -18,5 +18,7 @@ use App\Models\User;
 
 class Game_PermissionsController extends Controller
 {
-    
+    public function index(Request $request){
+        return view('la.Game_Permissions.index');
+    }
 }
