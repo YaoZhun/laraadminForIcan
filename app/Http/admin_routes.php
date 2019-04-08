@@ -77,4 +77,12 @@ Route::group(['as' => $as, 'middleware' => ['auth', 'permission:ADMIN_PANEL']], 
 	Route::post(config('laraadmin.adminRoute') . '/create_backup_ajax', 'LA\BackupsController@create_backup_ajax');
 	Route::get(config('laraadmin.adminRoute') . '/downloadBackup/{id}', 'LA\BackupsController@downloadBackup');
 	/* ==================  GamePermissions ================== */
+
+	/* ================== Game_permissions ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/game_permissions', 'LA\Game_permissionsController');
+	Route::get(config('laraadmin.adminRoute') . '/game_permission_dt_ajax', 'LA\Game_permissionsController@dtajax');
+
+	/* ================== Tests ================== */
+	Route::resource(config('laraadmin.adminRoute') . '/tests', 'LA\TestsController');
+	Route::get(config('laraadmin.adminRoute') . '/test_dt_ajax', 'LA\TestsController@dtajax');
 });
