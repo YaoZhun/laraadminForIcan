@@ -18,7 +18,11 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
+<<<<<<< HEAD
         Module::generate("Users", 'users', 'name', 'fa-group', [
+=======
+        Module::generate("Users", 'users', 'checkbox', 'fa-group', [
+>>>>>>> parent of 19fa454... 測試模組更新系統
             ["name", "Name", "Name", false, "", 5, 250, true],
             ["context_id", "Context", "Integer", false, "0", 0, 0, false],
             ["email", "Email", "Email", true, "", 0, 250, false],
