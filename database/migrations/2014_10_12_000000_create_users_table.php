@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Module::generate("Users", 'users', 'checkbox', 'fa-group', [
-            ["name", "Name", "Name", false, "", 5, 250, true],
+            ["name", "Name", "Name", true, "", 5, 250, true],
             ["context_id", "Context", "Integer", false, "0", 0, 0, false],
             ["email", "Email", "Email", true, "", 0, 250, false],
             ["password", "Password", "Password", false, "", 6, 250, true],
