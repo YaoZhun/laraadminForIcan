@@ -21,15 +21,9 @@ use App\User;
 
 class UsersController extends Controller
 {
-<<<<<<< HEAD
 	public $show_action = false;
 	public $view_col = 'name';
 	public $listing_cols = ['id', 'name', 'email', 'type'];
-=======
-	public $show_action = true;
-	public $view_col = 'checkbox';
-	public $listing_cols = ['id', 'name', 'context_id', 'email', 'type', 'checkbox', 'mobile', 'LoginTime', 'Birthday'];
->>>>>>> parent of 19fa454... 測試模組更新系統
 	
 	public function __construct() {
 		// Field Access of Listing Columns
