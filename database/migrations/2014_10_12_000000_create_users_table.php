@@ -4,6 +4,7 @@
  * Help: http://laraadmin.com
  */
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Dwij\Laraadmin\Models\Module;
@@ -17,16 +18,12 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Module::generate("Users", 'users', 'checkbox', 'fa-group', [
-            ["name", "Name", "Name", true, "", 5, 250, true],
+        Module::generate("Users", 'users', 'name', 'fa-group', [
+            ["name", "Name", "Name", false, "", 5, 250, true],
             ["context_id", "Context", "Integer", false, "0", 0, 0, false],
             ["email", "Email", "Email", true, "", 0, 250, false],
             ["password", "Password", "Password", false, "", 6, 250, true],
-            ["type", "User Type", "Dropdown", false, "Employee", 0, 0, false, ["Employee","Client"]],
-            ["checkbox", "checkbox", "Checkbox", false, "", 0, 0, false],
-            ["mobile", "Mobile", "Mobile", false, "", 10, 20, false],
-            ["LoginTime", "LoginTime", "Datetime", false, "", 0, 0, false],
-            ["Birthday", "Birthday", "Date", false, "", 0, 0, false],
+            ["type", "User Type", "Dropdown", false, "Employee", 0, 0, false, ["Employee", "Client"]],
         ]);
 		
 		/*

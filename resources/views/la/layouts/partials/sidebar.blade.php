@@ -33,14 +33,13 @@
 
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
-            <li class="header">選單</li>
+            <li class="header">MODULES</li>
             <!-- Optionally, you can add icons to the links -->
-            {{--  <li><a href="{{ url(config('laraadmin.adminRoute')) }}"><i class='fa fa-home'></i> <span>儀錶板</span></a></li>  --}}
+            <li><a href="{{ url(config('laraadmin.adminRoute')) }}"><i class='fa fa-home'></i> <span>Dashboard</span></a></li>
             <?php
             $menuItems = Dwij\Laraadmin\Models\Menu::where("parent", 0)->orderBy('hierarchy', 'asc')->get();
             ?>
             @foreach ($menuItems as $menu)
-         
                 @if($menu->type == "module")
                     <?php
                     $temp_module_obj = Module::get($menu->name);
@@ -57,6 +56,7 @@
                 @endif
             @endforeach
             <!-- LAMenus -->
+            
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
